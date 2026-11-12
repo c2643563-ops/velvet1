@@ -1,0 +1,70 @@
+[
+  {
+    "id": "VC-841048",
+    "table": 4,
+    "customer": "Ayesha Khan",
+    "phone": "0300-4128890",
+    "method": "jazzcash",
+    "payment": "Online",
+    "paymentStatus": "Paid",
+    "status": "New",
+    "note": "Extra truffle aioli on the side",
+    "total": 3820,
+    "createdAt": "2026-11-12T07:38:00.000Z",
+    "items": [
+      { "name": "Velvet Truffle Smash Burger", "qty": 2, "price": 1290 },
+      { "name": "Iced Spanish Latte", "qty": 2, "price": 620 }
+    ]
+  },
+  {
+    "id": "VC-841047",
+    "table": 9,
+    "customer": "Bilal Ahmed",
+    "phone": "0321-9981122",
+    "method": "cash",
+    "payment": "Cash",
+    "paymentStatus": "Pending",
+    "status": "Preparing",
+    "note": "Medium-well steak please",
+    "total": 3540,
+    "createdAt": "2026-11-12T07:31:00.000Z",
+    "items": [
+      { "name": "Chargrilled Herb Butter Ribeye", "qty": 1, "price": 2850 },
+      { "name": "Parmesan Black Truffle Fries", "qty": 1, "price": 690 }
+    ]
+  },
+  {
+    "id": "VC-841046",
+    "table": 2,
+    "customer": "Sara Malik",
+    "phone": "0333-5501920",
+    "method": "raast",
+    "payment": "Online",
+    "paymentStatus": "Paid",
+    "status": "Ready",
+    "note": "",
+    "total": 4280,
+    "createdAt": "2026-11-12T07:24:00.000Z",
+    "items": [
+      { "name": "Creamy Mushroom Tarragon Chicken", "qty": 2, "price": 1580 },
+      { "name": "Velvet Gold Cappuccino", "qty": 2, "price": 560 }
+    ]
+  },
+  {
+    "id": "VC-841045",
+    "table": 12,
+    "customer": "Usman Tariq",
+    "phone": "",
+    "method": "cash",
+    "payment": "Cash",
+    "paymentStatus": "Paid",
+    "status": "Served",
+    "note": "",
+    "total": 2130,
+    "createdAt": "2026-11-12T07:12:00.000Z",
+    "items": [
+      { "name": "Crispy Hot Honey Chicken Burger", "qty": 1, "price": 980 },
+      { "name": "Signature Dynamite Prawns", "qty": 1, "price": 1150 }
+    ]
+  }
+]
