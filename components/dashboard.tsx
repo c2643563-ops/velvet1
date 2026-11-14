@@ -1,0 +1,21 @@
+import { ArrowDownRight, ArrowUpRight, ShoppingBag, Wallet, Users, Clock3, Plus, Download, CalendarDays } from "lucide-react";
+import { OrderTable } from "./order-table";
+
+const stats = [
+  { label: "Total revenue", value: "Rs. 84,250", change: "+12.8%", note: "vs. yesterday", icon: Wallet, color: "green" },
+  { label: "Total orders", value: "126", change: "+8.2%", note: "vs. yesterday", icon: ShoppingBag, color: "blue" },
+  { label: "Avg. order value", value: "Rs. 668", change: "+4.6%", note: "vs. yesterday", icon: ChartIcon, color: "purple" },
+  { label: "Active tables", value: "09 / 15", change: "60%", note: "current occupancy", icon: Users, color: "orange" }
+];
+function ChartIcon(props: any) { return <Clock3 {...props}/>; }
+
+export function Dashboard() {
+  return <>
+    <div className="welcome-row"><div><div className="eyebrow"><span className="live-dot"/> LIVE OVERVIEW</div><h2>Good afternoon, Owner <span>✦</span></h2><p>Here’s what’s happening at Velvet Cafe & Grill today.</p></div><div className="welcome-actions"><button className="button secondary"><CalendarDays size={16}/> Nov 11, 2026</button><button className="button primary"><Plus size={16}/> New order</button></div></div>
+    <section className="stats-grid">{stats.map(s => { const Icon=s.icon; return <article className="stat-card" key={s.label}><div className="stat-top"><span>{s.label}</span><i className={`stat-icon ${s.color}`}><Icon size={18}/></i></div><h3>{s.value}</h3><div className="stat-foot"><span className="trend"><ArrowUpRight size={14}/>{s.change}</span><span>{s.note}</span></div></article>})}</section>
+    <section className="content-grid"><article className="panel sales-panel"><div className="panel-heading"><div><h3>Revenue overview</h3><p>Track your cafe’s performance</p></div><button className="select-button">This week⌄</button></div><div className="revenue-total"><strong>Rs. 3,42,680</strong><span><ArrowUpRight size={14}/> 18.4%</span><small>vs. last week</small></div><div className="chart"><div className="chart-y"><span>80k</span><span>60k</span><span>40k</span><span>20k</span><span>0</span></div><div className="chart-area"><div className="grid-lines"><i/><i/><i/><i/><i/></div><svg viewBox="0 0 700 190" preserveAspectRatio="none" role="img" aria-label="Illustrative weekly revenue chart"><defs><linearGradient id="fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stopColor="#23845f" stopOpacity=".20"/><stop offset="100%" stopColor="#23845f" stopOpacity="0"/></linearGradient></defs><path d="M0 145 C45 130 60 145 100 116 S165 120 200 96 S260 115 300 80 S365 96 400 70 S460 82 500 55 S565 76 600 38 S665 45 700 18 L700 190 L0 190Z" fill="url(#fill)"/><path d="M0 145 C45 130 60 145 100 116 S165 120 200 96 S260 115 300 80 S365 96 400 70 S460 82 500 55 S565 76 600 38 S665 45 700 18" fill="none" stroke="#23845f" strokeWidth="3" vectorEffect="non-scaling-stroke"/></svg><div className="chart-x"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div></div></div></article>
+      <article className="panel quick-panel"><div className="panel-heading"><div><h3>Quick actions</h3><p>Common tasks, one click away</p></div></div><div className="quick-list"><button><span className="quick-icon mint"><Plus/></span><span><b>Add new product</b><small>Add an item to your menu</small></span><ArrowUpRight/></button><button><span className="quick-icon lavender"><Download/></span><span><b>Download sales report</b><small>Export your daily performance</small></span><ArrowUpRight/></button><button><span className="quick-icon peach"><Users/></span><span><b>Manage tables</b><small>Update table status and QR</small></span><ArrowUpRight/></button></div></article></section>
+    <section className="panel orders-panel"><div className="panel-heading"><div><h3>Recent orders <span className="count-badge">4</span></h3><p>Monitor and manage incoming orders</p></div><button className="button secondary small">View all orders <ArrowUpRight size={14}/></button></div><OrderTable/></section>
+    <p className="demo-note">Demo workspace · Sample figures and orders are shown. Connect the database before using this system for real transactions.</p>
+  </>;
+}
